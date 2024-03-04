@@ -2,25 +2,55 @@ body {
     margin: 0;
     padding: 0;
     font-family: "roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
 }
-/* -----Font and color CSS----- */
+/* -----Font, color, CSS and Anims----- */
 
 #logo, .hero h2, button {
     color: #F9FaF8;
 }
-.link a, .hero .text {
+.link a, .hero .text, .signup .text p {
     color: #E5e7eb;
     text-decoration: none;
     font-size: 18px;
+    transition: 0.3s;
 }
 .header, .hero {
     background-color: #1F2937;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 button, .signup {
     background-color: #3882f6;
+}
+
+button:hover {
+    background-color: #F9FaF8;
+    color: #1F2937;
+    border-color: #F9FaF8;
+}
+
+.header li:hover {
+    background-color: #E5e7eb;
+}
+
+.quote .text{
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+    font-weight: 350;
+    max-width: 780px;
+    flex-wrap: wrap;
+}
+
+.quote .name {
+    font-size: 24px;
+    color: #1F2937;
+    font-weight: 600;
+    text-align: right;
+    margin-left: 480px;
 }
 
 /* -----Header----- */
@@ -28,25 +58,31 @@ button, .signup {
 .header {
     padding: 0px 200px;
     height: 48px;
+    gap: 350px;
 }
 .header #logo {
     font-size: 24px;
     font-weight: 800;
 }.header .link {
     display: flex;
-    gap: 24px;
     list-style: none;
+
 }
 li {
     transition: all 0.1s ease;
+    padding: 5px 15px;
+    border-radius: 25px;
 }
 a:hover {
     text-decoration: underline;
+    color: #1F2937;
 }
 /* -----Hero----- */
 
 .hero {
     padding: 120px 200px;
+    margin-bottom: 48px;
+    gap: 48px;
 }
 .hero .text {
     flex-basis: 450px;
@@ -70,10 +106,90 @@ button {
     font-size: 18px;
     font-weight: 700;
     border-radius: 8px;
-    border: none;
-    transition: all 0.1s ease;
+    border: 2px solid #3882f6;
+    transition: 0.3s;
     cursor: pointer
 }
-button:hover, li:hover {
-    filter: brightness(0.8);
+
+/* Content */
+
+.content h3 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1f2937;
+    text-align: center;
 }
+.content img {
+    width: 150px;
+    height: auto;
+    border: 4px solid #3882f6;
+    border-radius: 20px;
+    margin-bottom: 10px;
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 200;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box .text {
+    font-size: 18px;
+    color: #1F2937;
+    text-align: center;
+    width: 175px;
+}
+
+/* Quote */
+
+.quote {
+    background-color: #e5e7eb;
+    padding: 120px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sign Up Button */
+
+.signup {
+    margin: 100px auto;
+    padding: 40px 100px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.signup .text h4, .signup .text p{
+    margin: 0px;
+    padding: 0;
+    color: #F9FaF8;
+}
+
+.signup .text h4 {
+    font-size: 24px;
+}
+
+.signup button {
+    border-color: #F9FaF8;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #E5e7eb;
+    font-size: 18px;
+}
+
